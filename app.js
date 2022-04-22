@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // route
-const routes = require('./routes/Route')
+const routes = require('./routes/routes')
 app.use('/', routes)
 
 //start server
