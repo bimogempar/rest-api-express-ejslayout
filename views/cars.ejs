@@ -1,6 +1,10 @@
-<% arrayCars.forEach(car => { %>
-<p><%= car.nama %></p>
-<p><%= car.rent %></p>
-<p><%= car.ukuran %></p>
-<img src="<%= car.img %>" alt="" style="width: 300px;">
-<% }) %>
+<div class="content-car">
+    <% arrayCars.forEach(car => { %>
+    <div class="box-car">
+        <p><%= car.nama %></p>
+        <p><%= car.rent %></p>
+        <p><%= car.ukuran %></p>
+        <img src="<%= car.img %>" alt="">
+    </div>
+    <% }) %>
+</div>

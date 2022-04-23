@@ -16,5 +16,17 @@
         "rent": 550000,
         "ukuran": "Medium",
         "img": "https://toyotamedandealer.com/wp-content/uploads/2021/02/new-kijang-inova-medan.png"
+    },
+    "655467": {
+        "nama": "Strada",
+        "rent": 750000,
+        "ukuran": "Large",
+        "img": "https://toyotamedandealer.com/wp-content/uploads/2021/02/new-kijang-inova-medan.png"
+    },
+    "913724": {
+        "nama": "Hilux",
+        "rent": 800000,
+        "ukuran": "Large",
+        "img": "https://toyotamedandealer.com/wp-content/uploads/2021/02/new-kijang-inova-medan.png"
     }
 }

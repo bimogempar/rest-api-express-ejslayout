@@ -4,7 +4,7 @@ body {
 
 .wrapper {
     display: flex;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .mini-sidebar {
@@ -21,6 +21,11 @@ body {
     font-size: 10px;
     list-style: none;
     padding: 0;
+    margin-top: -2vh;
+}
+
+.mini-sidebar li {
+    margin: 3vh 0 3vh 0;
 }
 
 .mini-sidebar i {
@@ -73,17 +78,32 @@ body {
 }
 
 .big-sidebar {
-    min-width: 10%;
+    min-width: 13%;
+    max-width: 13%;
     min-height: 92vh;
-    background-color: #ff0e0e;
+    background-color: white;
+    padding: 2vh;
 }
 
 .content {
     /* font-size: 50px; */
     min-height: 92vh;
     background-color: #F4F5F7;
+    padding: 2vh;
 }
 
 .collapse-big-sidebar {
     display: none;
+}
+
+.content-car {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh 2vh;
+    background-color: yellow;
+}
+
+.box-car {
+    background-color: red;
+    border: black solid 5px;
 }
