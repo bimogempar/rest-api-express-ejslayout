@@ -69,9 +69,7 @@ carRoute.delete('/car/delete/:id', (req, res) => {
 })
 
 carRoute.get('/test', (req, res) => {
-    const cars = getCarData()
-    const arrayCars = Object.values(cars)
-    res.render('cars', { layout: 'layouts/app', arrayCars: arrayCars })
+    res.render('add', { layout: 'layouts/app' })
 })
 
 module.exports = router;
