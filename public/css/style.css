@@ -8,10 +8,10 @@ body {
 }
 
 .mini-sidebar {
-    padding: 2vh;
+    /* padding: 2vh; */
     width: auto;
     /* min-height: 100vh; */
-    max-height: 100%;
+    max-height: max-content;
     background-color: #0D28A6;
 }
 
@@ -21,11 +21,12 @@ body {
     font-size: 10px;
     list-style: none;
     padding: 0;
-    margin-top: -2vh;
+    padding-top: 2vh;
 }
 
 .mini-sidebar li {
-    margin: 3vh 0 3vh 0;
+    padding: 1vh;
+    /* background-color: red; */
 }
 
 .mini-sidebar i {
@@ -34,7 +35,16 @@ body {
 }
 
 .mini-sidebar p {
+    margin-bottom: -0.1vh;
     color: white;
+}
+
+.mini-sidebar li:hover {
+    background-color: #304cca;
+}
+
+.active-mini-sidebar {
+    background-color: #304cca;
 }
 
 .main-content {
@@ -85,6 +95,28 @@ body {
     padding: 2vh;
 }
 
+.big-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: -2vh;
+    padding-top: 1vh;
+}
+
+.big-sidebar ul li {
+    margin: 1vh 0 1vh 0;
+    font-weight: 500;
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+.active-big-sidebar {
+    background-color: #CFD4ED;
+}
+
+.big-sidebar ul li:hover {
+    background-color: #CFD4ED;
+}
+
 .content {
     /* font-size: 50px; */
     min-height: 92vh;
@@ -94,4 +126,10 @@ body {
 
 .collapse-big-sidebar {
     display: none;
+}
+
+@media (min-width: 30em) and (max-width: 80em) {
+    .big-sidebar {
+        display: none;
+    }
 }
