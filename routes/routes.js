@@ -18,7 +18,7 @@ const getCarData = () => {
 const carRoute = require('./car.js') // import account route
 router.use(carRoute) // use account route
 
-// Create - add data to JSON file
+// create - add data to JSON file
 carRoute.post('/cars', (req, res) => {
 
     var existCar = getCarData()
@@ -31,20 +31,29 @@ carRoute.post('/cars', (req, res) => {
     res.send(req.body)
 })
 
-// Read - get all accounts from the json file
+// read - get all cars from the json file
 carRoute.get('/cars', (req, res) => {
-    const accounts = getCarData()
-    res.send(accounts)
+    const cars = getCarData()
+    // res.send(cars)
+    const arrayCars = Object.values(cars)
+    res.render('cars', { layout: 'layouts/app', arrayCars: arrayCars })
 })
 
-// Update - using Put method
+// single page - get single account from the json file
+carRoute.get('/cars/:id', (req, res) => {
+    const cars = getCarData()
+    const car = cars[req.params.id]
+    res.send(car)
+})
+
+// update - using Put method
 carRoute.put('/car/update/:id', (req, res) => {
     var existCar = getCarData()
     fs.readFile(dataPath, 'utf8', (err, data) => {
         const carId = req.params['id'];
         existCar[carId] = req.body;
         saveCarData(existCar);
-        res.send(`accounts with id ${carId} has been updated`)
+        res.send(`cars with id ${carId} has been updated`)
     }, true);
 });
 
@@ -55,8 +64,14 @@ carRoute.delete('/car/delete/:id', (req, res) => {
         const carId = req.params['id'];
         delete existCar[carId];
         saveCarData(existCar);
-        res.send(`accounts with id ${carId} has been deleted`)
+        res.send(`cars with id ${carId} has been deleted`)
     }, true);
+})
+
+carRoute.get('/test', (req, res) => {
+    const cars = getCarData()
+    const arrayCars = Object.values(cars)
+    res.render('cars', { layout: 'layouts/app', arrayCars: arrayCars })
 })
 
 module.exports = router;
