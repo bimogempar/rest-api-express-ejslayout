@@ -13,43 +13,12 @@
 </head>
 
 <body>
-    <!-- <%- include('../partials/top-nav'); %> -->
     <div class="wrapper">
-        <div class="mini-sidebar">
-            <ul>
-                <li>
-                    <i class="fa fa-home"></i>
-                    <p>Dashboard</p>
-                </li>
-                <li>
-                    <i class="fa fa-truck"></i>
-                    <p>Cars</p>
-                </li>
-            </ul>
-        </div>
+        <%- include('../partials/min-sidebar.ejs')%>
         <div class="main-content">
-            <div class="top-navbar">
-                <div class="left-side">
-                    <div>
-                        This is logo
-                    </div>
-                    <div>
-                        <button id="collapspe-big-sidebar" class="btn btn-white"><i class="fa fa-bars"></i></button>
-                    </div>
-                </div>
-                <div class="right-side">
-                    <div>
-                        This is searching
-                    </div>
-                    <div>
-                        This is user account
-                    </div>
-                </div>
-            </div>
+            <%- include('../partials/top-navbar.ejs')%>
             <div class="wrapper-content">
-                <div class="big-sidebar">
-                    This is big sidebar
-                </div>
+                <%- include('../partials/big-sidebar.ejs')%>
                 <div class="content">
                     <%- body %>
                 </div>
