@@ -1,10 +1,18 @@
-<div class="content-car">
+<div class="row m-0 p-0">
     <% arrayCars.forEach(car => { %>
-    <div class="box-car">
-        <p><%= car.nama %></p>
-        <p><%= car.rent %></p>
-        <p><%= car.ukuran %></p>
-        <img src="<%= car.img %>" alt="">
+    <div class="col-md-4 p-2">
+        <div class="card">
+            <img src="<%= car.img %>" alt="" class="card-img-top">
+            <div class="card-body">
+                <p><%= car.nama %></p>
+                <p class="fw-bold">Rp. <%= car.rent %> / day</p>
+                <p class="text-secondary"><i class="fa fa-clock-o"></i> Updated at 4 Apr 2022, 09.00</p>
+                <div class="d-inline-flex gap-2">
+                    <button class="btn btn-outline-danger"><i class="fa fa-trash"></i> Delete</button>
+                    <button class="btn btn-success text-white"><i class="fa fa-edit"></i> Edit</button>
+                </div>
+            </div>
+        </div>
     </div>
     <% }) %>
 </div>

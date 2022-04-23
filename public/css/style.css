@@ -95,15 +95,3 @@ body {
 .collapse-big-sidebar {
     display: none;
 }
-
-.content-car {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2vh 2vh;
-    background-color: yellow;
-}
-
-.box-car {
-    background-color: red;
-    border: black solid 5px;
-}
